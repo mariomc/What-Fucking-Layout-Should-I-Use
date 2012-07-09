@@ -105,6 +105,10 @@ nav {
             background: image-url('icon-about-2x.png') 10px 3px no-repeat;
             background-size: 50%;
           }
+          @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+            background: image-url('icon-about-2x.png') 10px 3px no-repeat;
+            background-size: 50%;
+          }
         }
       }
     }
