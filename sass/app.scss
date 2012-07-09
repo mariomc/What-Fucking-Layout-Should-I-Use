@@ -1,0 +1,300 @@
+/* Artfully masterminded by ZURB  */
+@import "settings";
+// @import "foundation";
+
+// Import Each Specific Piece for SASS
+@import "foundation/base";
+@import "foundation/globals";
+// @import "foundation/typography";
+@import "foundation/grid";
+@import "foundation/ui";
+@import "foundation/buttons";
+// @import "foundation/tabs";
+// @import "foundation/navbar";
+@import "foundation/forms";
+// @import "foundation/orbit";
+@import "foundation/reveal";
+
+// My Variables
+$blue: #0ca1aa;
+
+body { margin: 0 !important; width: 100%; background: image-url('diag-bg.png') 0 0 repeat #eaeaea; font-family: 'Quattrocento Sans', sans-serif; }
+.row { width: auto; max-width: 960px; }
+a { color: $blue; }
+
+.row .one-third.columns { width: 30.4%; }
+
+// Navigation Bar
+nav {
+  width: 100% !important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  padding: 15px 0;
+  background: $black;
+  border-top: solid 1px $black;
+  @include box-shadow(0 1px 0 rgba(#fff, .65) inset, 0 -6px 18px rgba(#000, .2));
+  @include respondTo(smallScreen) {
+    bottom: auto !important;
+    top: 0 !important;
+    position: absolute;
+    margin-top: 0;
+    @include box-shadow(0 6px 18px rgba(#000, .2));
+  }
+  section {
+    max-width: 960px;
+    margin: 0 auto;
+    @media only screen and (max-width: 960px) { padding-left: 20px; }
+    img {
+      width: 140px;
+      position: relative;
+      top: 2px;
+      @include respondTo(smallScreen) { width: 90px; left: -5px; top: 2px; }
+    }
+  }
+  ul {
+    float: right;
+    margin-bottom: 0;
+    list-style: none;
+    text-align: right;
+    @media only screen and (max-width: 960px) { padding-right: 20px; }
+    @include respondTo(smallScreen) { padding-right: 0; margin-top: 10px; }
+    li {
+      float: left;
+      margin-left: 13px;
+      margin-bottom: 0;
+      @include respondTo(smallScreen) { margin-left: 0px; }
+      a {
+        color: $white;
+        text-transform: uppercase;
+        font-size: ms(0) - 1;
+        padding: 4px 0;
+        padding-left: 22px;
+        display: block;
+        font-weight: bold;
+        padding: 4px 14px 5px 35px;
+        @include border-radius(1000px);
+        @include respondTo(smallScreen) {
+          font-size: ms(1);
+          width: 34px;
+          height: 34px;
+          text-indent: -9999px !important;
+          color: transparent;
+          margin-top: -8px;
+        }
+        &:hover { color: darken($white, 30%);
+          @include respondTo(smallScreen) { color: transparent; }
+        }
+        &.share { background: image-url('icon-share-sm.png') 10px 3px no-repeat;
+          @include respondTo(smallScreen) { @include opacity(1); background: image-url('icon-share.png') 0 0 no-repeat; }
+          &.active { background-color: fade-out($white, .83);
+            @include respondTo(smallScreen) { background-color: transparent; @include opacity(0.5); }
+          }
+          @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+            background: image-url('icon-share-2x.png') 10px 3px no-repeat;
+            background-size: 50%;
+          }
+        }
+        &.about { background: image-url('icon-about-sm.png') 10px 3px no-repeat;
+          @include respondTo(smallScreen) { @include opacity(1); background: image-url('icon-about.png') 0 0 no-repeat; }
+          &.active { background-color: fade-out($white, .83);
+            @include respondTo(smallScreen) { background-color: transparent; @include opacity(0.5); }
+          }
+          @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+            background: image-url('icon-about-2x.png') 10px 3px no-repeat;
+            background-size: 50%;
+          }
+        }
+      }
+    }
+  }
+  article {
+    width: 100%;
+    background: lighten($black, 14%);
+    padding: 20px 0;
+    position: relative;
+    top: 15px;
+    @include box-shadow(0 1px 0 rgba(#fff, .05) inset);
+    @include respondTo(smallScreen) { padding: 20px; }
+    &.share {
+      display: none;
+    }
+    &.about {
+      display: none;
+    }
+    &>div.wrapper {
+      @include outerRow();
+      @media only screen and (max-width: 960px) { padding-right: 20px; }
+      @include respondTo(smallScreen) { padding-right: 0; }
+      &>div {
+        @include column(15);
+        padding-left: 0;
+        @media only screen and (max-width: 960px) { padding-left: 20px; }
+        color: #fff;
+        @include respondTo(smallScreen) { padding-right: 0; padding-left: 0px; }
+        h1 {
+          margin: 0;
+          font-size: 20px;
+          color: $blue;
+          margin-bottom: 0;
+        }
+        p {
+          font-size: 16px;
+          line-height: 1.4;
+          margin-top: 5px;
+          margin-bottom: 0;
+        }
+      }
+      div.panel {
+        @include column(8);
+        @include offsetBy(1);
+        border: none;
+        background: fade-out($white, .95);
+        padding-bottom: 19px;
+        padding-left: 16px;
+        margin-top: 2px;
+        margin-bottom: 0;
+        @include respondTo(smallScreen) { margin-top: 20px; margin-left: 0; }
+        p {
+          font-size: 13px;
+          padding-top: 14px;
+          color: #919191;
+          margin-bottom: 14px;
+          font-family: "Helvetica", Helvetica, Arial, sans-serif;
+        }
+        a.button { margin-right: 10px;
+          @include respondTo(smallScreen) { margin-bottom: 10px; }
+          &+a.button { margin-bottom: 0; }
+        }
+      }
+    }
+    aside {
+      color: #fff;
+      @include outerRow();
+      @media only screen and (max-width: 960px) { padding-left: 20px; padding-right: 20px; }
+      @include respondTo(smallScreen) { padding-left: 0px; padding-right: 0px; }
+      h2 {
+        margin-top: 0;
+        font-size: 16px;
+        line-height: 1.3;
+        color: $blue;
+        @include column(6);
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+      p {
+        @include column(9);
+        margin-top: 0;
+        line-height: 1.3;
+        color: #919191;
+        margin-top: 3px;
+        margin-bottom: 0;
+        @include respondTo(smallScreen) { padding: 0; }
+      }
+      form {
+        @include column(8);
+        @include offsetBy(1);
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: 0;
+        margin-top: 5px;
+        @include respondTo(smallScreen) { margin-left: 0; margin-top: 14px; }
+        input[type="text"] {
+          margin-bottom: 0 !important;
+          @include border-radius(1000px);
+          padding-left: 15px;
+        }
+      }
+    }
+    hr {
+      border: solid #2f2f2f;
+      border-width: 1px 0 0 0;
+      margin: 22px 0 22px 0;
+    }
+  }
+}
+// Refresh Button
+a#newLayout {
+  background: 50% 50% no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 12px;
+  margin-left: -28px;
+  text-indent: -99999px;
+  @include background-image(linear-gradient(color-stops(lighten($black, 17.5%), lighten($black, 6%))));
+  @include border-radius(1000px);
+  @include respondTo(smallScreen) {
+    top: 11px;
+    margin-left: -23px;
+  }
+  &:hover {
+    @include background-image(linear-gradient(color-stops(lighten($black, 20.5%), lighten($black, 8%))));
+    &>span {
+      background: image-url('icon-refresh-sm.png') 50% 50% no-repeat;
+    }
+  }
+  &>span {
+    width: 54px;
+    height: 54px;
+    display: block;
+    border: solid 1px $black;
+    @include box-shadow(0 -2px 2px rgba(#fff, .1) inset);
+    @include border-radius(1000px);
+    background: image-url('icon-refresh-sm.png') 50% 50% no-repeat;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+      background: image-url('icon-refresh.png') 50% 50% no-repeat;
+      background-size: 50%;
+    }
+    @include respondTo(smallScreen) {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+}
+
+header {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  @include respondTo(smallScreen) { padding-top: 85px; }
+  h1 {
+    text-align: center;
+    font-size: 46px;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1.15;
+    margin-bottom: 0;
+    min-width: 100%;
+    @include respondTo(smallScreen) { margin-top: 0; padding: 20px; font-size: 26px; width: 100% !important; }
+  }
+}
+
+section.row.grid {
+  width: 600px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 120px;
+  @include respondTo(smallScreen) { margin-bottom: 20px; margin-top: 14px; padding: 0 20px; max-width: 100%; width: 100%; }
+}
+
+.display {
+  background: fade-out($blue, .5);
+  border: solid 1px $blue;
+  @include border-radius(1px);
+  @include box-shadow(0 1px 0 rgba(#fff, .7) inset, 0 0 10px rgba($blue, .5));
+  @include background-clip(content-box);
+  margin-bottom: 20px;
+  padding: 0;
+  @include respondTo(smallScreen) { padding-left: 0px !important; padding-right: 0px !important; }
+  &:last-child { margin-right: 0; }
+  &.tny { height: 20px; }
+  &.sm { height: 40px; }
+  &.md { height: 100px; }
+  &.lg { height: 300px; }
+  &.xlg { height: 500px; }
+}
+
+

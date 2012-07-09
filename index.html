@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+	<!-- For iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+	<!-- For first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png">
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+	<meta name="keywords" content="design, web design, layout, design inspiration, fucking layouts, foundation layouts, grid, design grid" />
+	<meta name="description" content="What Fucking Layout Should I Use is a site made by Chris Michel, Bay area designer working for ZURB. A fun little side project that may prove to be useful if you give it a spin." />
+	<meta name="author" content="Chris Michel" />
+	<meta name="copyright" content="Chris Michel. Copyright (c) 2012" />
+
+	<title>What Fucking Layout Should I Use?</title>
+
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="css/app.css">
+
+	<script src="js/foundation/modernizr.foundation.js"></script>
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link href="http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic" rel="stylesheet" type="text/css">
+
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(["_setAccount", "UA-33245516-1"]);
+	  _gaq.push(["_trackPageview"]);
+
+	  (function() {
+	    var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+	    ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+	    var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+</head>
+<body>
+
+	<nav>
+		<section>
+			<img src="img/logo.png" alt="What Fucking Layout Should I Use?">
+			<a href="#" id="newLayout"><span>New Layout</span></a>
+			<ul>
+				<li><a class="share" href="#">Share</a></li>
+				<li><a class="about" href="#">About</a></li>
+			</ul>
+		</section>
+		<article class="about">
+			<div class="wrapper">
+				<div>
+					<h1>This site was created for fun, but feel free to use it for real!</h1>
+					<p>These layouts were created using <a href="http://foundation.zurb.com">Foundation 3</a>, which allows for rapid responsive prototyping. Take a gander through the layouts and you might actually find something that sparks an idea for a real project. If you want to add a layout or headline, just send me the code or an image of what it should look like.</p>
+				</div>
+				<div class="panel">
+					<p>Crafted by Chris Michel, a bay area designer working at <a href="http://www.zurb.com">ZURB</a> and dominating the world.</p>
+					<a class="tiny button round" href="mailto:cm@chrismdesign.com?subject=General Contact Inquiry or Praise">Email Me</a>
+					<a class="tiny button round secondary" href="mailto:cm@chrismdesign.com?subject=Layout or Headline Submission">Submit a Layout or Headline</a>
+				</div>
+			</div>
+		</article>
+		<article class="share">
+			<aside>
+				<h2>Share this site with everyone you know and some that you don’t!</h2>
+				<p>After sharing, make sure you get back to work! There are many hours of productivity left in the day.</p>
+				<form>
+					<input type="text" value="http://bit.ly/L31kYU">
+				</form>
+			</aside>
+		</article>
+	</nav>
+
+	<header>
+		<h1>How about this fucking righteously awesome compisition right here?</h1>
+	</header>
+
+	<section class="row grid">
+		<div class="twentyfour columns">
+
+			<div class="row">
+				<div class="twentyfour columns display sm"></div>
+			</div>
+			<div class="row">
+				<div class="eight mobile-four columns display lg"></div>
+				<div class="one columns mobile-one"></div>
+				<div class="fifteen mobile-seven columns display lg"></div>
+			</div>
+			<div class="row">
+				<div class="twentyfour columns display md"></div>
+			</div>
+			<div class="row">
+				<div class="eight mobile-four columns display md"></div>
+				<div class="one columns mobile-one"></div>
+				<div class="eight mobile-three columns display md"></div>
+				<div class="one columns mobile-one"></div>
+				<div class="six mobile-three columns display md"></div>
+			</div>
+			<div class="row">
+				<div class="twentyfour columns display tny"></div>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- Included JS Files -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/foundation/jquery.reveal.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
+</html>
